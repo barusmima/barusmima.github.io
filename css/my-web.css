@@ -1,5 +1,4 @@
 nav {
-  text-transform: capitalize;
   position: absolute;
   top: 0;
   right: 0;
@@ -10,6 +9,7 @@ nav #sandwich-button {
   right: 15px;
   top: 15px;
   height: 60px;
+  user-select: none;
   position: fixed;
   z-index: 10;
   cursor: pointer;
@@ -50,7 +50,7 @@ nav a {
   margin: 0;
 }
 
-nav .highlighted {
+nav a.highlighted {
   text-decoration: underline;
 }
 
@@ -76,6 +76,7 @@ nav .anchor {
 nav .anchor #pop-up-panel {
   right: 15px;
   top: 85px;
+  user-select: none;
   padding: 8px 20px;
   flex-direction: column;
   white-space: nowrap;
@@ -87,11 +88,26 @@ nav .anchor #pop-up-panel {
   display: none;
 }
 
+nav .anchor #pop-up-panel .sub-menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 9px;
+  user-select: none;
+}
+
 nav .anchor #pop-up-panel .pop-up-layer-0 {
-  color: hsla(240, 100%, 50%, 1);
+  color: hsla(228, 8.77193%, 11.176471%, 1);
   font-weight: 600;
   font-size: 26px;
   margin: 9px;
+  user-select: none;
+}
+
+nav .anchor #pop-up-panel .pop-up-layer-1 {
+  color: hsla(228, 8.77193%, 11.176471%, 0.8) !important;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 2px 0px 2px 20px;
   user-select: none;
 }
 
@@ -177,8 +193,8 @@ h2 {
 
 h3 {
   margin: 10px 0;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 32px;
   text-align: center;
 }
 
